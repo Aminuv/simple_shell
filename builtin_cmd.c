@@ -9,13 +9,12 @@
 int (*get_cmd_f(char *c))(char **, char*, int)
 {
 	op_t builtins[] = {
-		{"cd", cd_cmd},
-		/*{"exit", exit_cmd},*/
-		{"env", env_cmd},
-		{"/usr/bin/env", env_cmd},
-		{"/bin/env", env_cmd},
-		{"setenv", setenv_cmd},
-		{"unsetenv", unsetenv_cmd},
+		{"cd", cd_command},
+		{"env", env_command},
+		{"/usr/bin/env", env_command},
+		{"/bin/env", env_command},
+		{"setenv", setenv_command},
+		{"unsetenv", unsetenv_command},
 		{NULL, NULL}
 	};
 	int i = 0;

@@ -43,7 +43,7 @@ int (*get_cmd_f(char *c))(char **, char *, int);
 /*builtins*/
 int cd_command(char **args, char *, int);
 int env_command(char **args, char *, int);
-int exit_command(char **args, char *, int )
+int exit_command(char **args, char *, int);
 int pwd_cmd(char **args, char *, int);
 int clear_cmd(char **, char *, int);
 

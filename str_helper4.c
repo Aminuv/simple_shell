@@ -91,7 +91,7 @@ char *_tostring(int _num)
  */
 void *_reallocates(void *p, unsigned int old_s, unsigned int new_s)
 {
-	void *p;
+	void *_p;
 	unsigned int i = 0;
 
 	if (new_s == old_s)
@@ -105,20 +105,20 @@ void *_reallocates(void *p, unsigned int old_s, unsigned int new_s)
 	}
 	else if (p == NULL)
 	{
-		p = malloc(new_s);
-		if (p == NULL)
+		_p = malloc(new_s);
+		if (_p == NULL)
 			return (NULL);
 		else
-			return (p);
+			return (_p);
 	}
 	else
 	{
 		char *cast_p, *cast_ptr;
 
-		p = malloc(new_s);
-		if (p == NULL)
+		_p = malloc(new_s);
+		if (_p == NULL)
 			return (NULL);
-		cast_p = (char *)p;
+		cast_p = (char *)_p;
 		cast_ptr = (char *)p;
 		for (; i < old_s; i++)
 			cast_p[i] = cast_ptr[i];

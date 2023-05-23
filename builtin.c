@@ -58,6 +58,8 @@ int env_command(char **args, char *p, int h)
  */
 int exit_command(char **args, char *p, int h)
 {
+	if (h && p)
+	{}
 	if (args[1] == NULL)
 	{
 		free_args(args);
@@ -70,6 +72,5 @@ int exit_command(char **args, char *p, int h)
 		free_args(args);
 		exit(status);
 	}
-
 	return (0);
 }
