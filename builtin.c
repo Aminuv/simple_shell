@@ -20,8 +20,6 @@ int cd_command(char **args, char *p, int h)
 	return (0);
 }
 
-
-
 /**
  * env_cmd - The env command for implements.
  * @args: Passed an arguments for input.
@@ -49,8 +47,6 @@ int env_command(char **args, char *p, int h)
 	(void)args;
 	return (0);
 }
-
-
 
 /**
  * exit_cmd - implements exit command
