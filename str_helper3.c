@@ -21,7 +21,7 @@ char *_strchr(char *s, char ch)
 }
 
 /**
- * _strspn - the length of a prefix substring
+ * _strsubpn - the length of a prefix substring
  * @s: string for the first input
  * @accp: string for the second input
  *

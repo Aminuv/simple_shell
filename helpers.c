@@ -121,7 +121,7 @@ int exec_commands(char **args, char *p, int h)
 }
 
 /**
- * xec_command - The executes commands from the shell.
+ * exec_command - The executes commands from the shell.
  * @arg: executable
  * @args: input.
  *

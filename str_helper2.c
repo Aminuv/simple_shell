@@ -138,7 +138,7 @@ char *_memset(char *s, char b, unsigned int num)
 }
 
 /**
- * _memcpy - for copies the memory from an area.
+ * _memcopy - for copies the memory from an area.
  * @dest:area destination
  * @src: area source
  * @num: number of bytes

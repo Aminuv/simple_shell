@@ -1,7 +1,7 @@
 #include "shell.h"
 
 /**
- * _non_isatty - non-interactive mode with an input
+ * _no_isatty - non-interactive mode with an input
  * @p: Name.
  * @h: The history counter.
  *
