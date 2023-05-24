@@ -36,7 +36,8 @@ char **parse_args(char *_cmd, const char *del)
 }
 
 /**
- * _strtok - for breaking the string into a sequence of zero or more nonempty tokens.
+ * _strtok - for breaking the string into a sequence of
+ *           zero or more nonempty tokens.
  * @str: input.
  * @del: specifies a set of bytes.
  *

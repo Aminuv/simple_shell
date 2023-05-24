@@ -3,7 +3,7 @@
 /**
  * _strlen - a returns fo length to the string
  * @s: string length.
- * 
+ *
  * Return: void.
  */
 int _strlen(char *s)
@@ -51,7 +51,7 @@ char *_strcopy(char *dst, char *ss)
 int _strcompare(char *s1, char *s2)
 {
 	int i = 0;
-	int sum;
+	int sum = 0;
 
 	while (!(s1[i] == '\0' || s2[i] == '\0'))
 	{
