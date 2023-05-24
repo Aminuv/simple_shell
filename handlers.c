@@ -50,8 +50,7 @@ void handle_command(char *c, char *p, int *h)
 		if ((i == 0) && (_strtowcompare(subtok[i], "exit", 4) == 0))
 		{
 			int status = 0;
-		if (subtok[1])
-			status = _toint(subtok[1]);
+		if (subtok[1])status = _toint(subtok[1]);
 		else
 			status = errno;
 
