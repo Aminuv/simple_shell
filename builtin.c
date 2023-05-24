@@ -21,7 +21,7 @@ int cd_command(char **args, char *p, int h)
 }
 
 /**
- * env_cmd - The env command for implements.
+ * env_command - The env command for implements.
  * @args: Passed an arguments for input.
  * @p: Name.
  * @h: History.
@@ -49,7 +49,7 @@ int env_command(char **args, char *p, int h)
 }
 
 /**
- * exit_cmd - implements exit command
+ * exit_command - implements exit command
  * @args: arguments passed in.
  * @p: program name.
  * @h: history counter.

@@ -42,14 +42,14 @@ int _setenv(char *_n, char *_v, int over_w)
 
 	while (*_env)
 	{
-		if (_strtowcompare(*_env, _n, _strlen(_n)) == 0 && (*_env)[_strlen(_n)] == '=')
+		if (_strtowcompare(*_env, _n, _strlen(_n)) == 0
+				&& (*_env)[_strlen(_n)] == '=')
 		{
 			if (!over_w)
 			{
 				free(new_v);
 				return (0);
 			}
-
 			_memcopy(new_v, _n, name_l);
 			new_v[name_l] = '=';
 			_memcopy(new_v + name_l + 1, _v, value_l);
@@ -86,7 +86,8 @@ int _unsetenv(char *_n)
 
 	while (*_env)
 	{
-		if (_strtowcompare(*_env, _n, _strlen(_n)) == 0 && (*_env)[_strlen(_n)] == '=')
+		if (_strtowcompare(*_env, _n, _strlen(_n)) == 0
+				&& (*_env)[_strlen(_n)] == '=')
 		{
 			char **tmp = _env;
 
