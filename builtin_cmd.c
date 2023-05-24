@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * get_cmd_f - Tehe function that point for builtins commands.
+ * get_command_f - Tehe function that point for builtins commands.
  * @c: input.
  *
  * Return: call a function
  */
-int (*get_cmd_f(char *c))(char **, char*, int)
+int (*get_command_f(char *c))(char **, char*, int)
 {
 	op_t builtins[] = {
 		{"cd", cd_command},

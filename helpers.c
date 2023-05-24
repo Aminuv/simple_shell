@@ -81,9 +81,9 @@ int exec_commands(char **args, char *p, int h)
 {
 	char *p_;
 
-	if (get_cmd_f(args[0]))
+	if (get_command_f(args[0]))
 	{
-		get_cmd_f(args[0])(args, p, h);
+		get_command_f(args[0])(args, p, h);
 		return (exit_v = 0);
 	}
 

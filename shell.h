@@ -38,7 +38,7 @@ void signal_handler(__attribute__((unused)) int signal);
 void free_args(char **args);
 
 /*builtins_helpers*/
-int (*get_cmd_f(char *c))(char **, char *, int);
+int (*get_command_f(char *c))(char **, char *, int);
 
 /*builtins*/
 int cd_command(char **args, char *, int);
