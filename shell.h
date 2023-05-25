@@ -31,13 +31,13 @@ typedef struct op
 	int (*f)(char **, char *, int);
 } op_t;
 
-/*main*/
+/*shell*/
 void prompt(void);
 char *check_comment(char *s);
 void signal_handler(__attribute__((unused)) int signal);
 void free_args(char **args);
 
-/*builtins_helpers*/
+/*helpers_cmd*/
 int (*get_command_f(char *c))(char **, char *, int);
 
 /*builtins*/
@@ -52,11 +52,11 @@ int clear_cmd(char **, char *, int);
 int setenv_command(char **args, char *, int);
 int unsetenv_command(char **args, char *, int);
 
-/*cmd_handlers*/
+/*handlers*/
 void handle_command(char *c, char *, int *);
 char **split(char *cmd, char *del);
 
-/*cmd_helphers*/
+/*helphers*/
 char *get_command();
 char *get_command_path(char *c);
 int exec_commands(char **args, char *, int);
@@ -82,19 +82,19 @@ void _isatty(char *, int *);
 void file_input(char **avr, char *, int *);
 
 
-/*string helphers*/
+/*str handler*/
 int _strlen(char *s);
 char *_strcopy(char *dst, char *ss);
 int _strcompare(char *s1, char *s2);
 int _strtowcompare(char *s1, char *s2, int num);
 char *_strconcatenate(char *dst, char *ss);
 
-/*string helphers*/
+/*str helphers*/
 char **parse_args(char *_cmd, const char *del);
 char *_strtok(char *str, const char *del);
 
 
-/*string helphers2*/
+/*string2*/
 ssize_t _getline(char **line_p, size_t *n, FILE *stream);
 int _toint(char *s);
 char *_strip(char *strm);
@@ -102,7 +102,7 @@ char *_memset(char *s, char b, unsigned int num);
 char *_memcopy(char *dest, char *src, unsigned int num);
 
 
-/*string helphers3*/
+/*string3*/
 char *_strchr(char *s, char ch);
 unsigned int _strsubpn(char *s, char *accp);
 char *_strpbrk(char *s, char *accp);
@@ -110,7 +110,7 @@ char *_strstr(char *hay_stack, char *n_dle);
 char *_strtok_r(char *str, char *_delim, char **save_p);
 
 
-/*string helphers3*/
+/*string4*/
 char *_strdup(char *str);
 char *_tostring(int _num);
 void *_reallocates(void *p, unsigned int old_s, unsigned int new_s);
