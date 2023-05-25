@@ -31,7 +31,7 @@ int main(__attribute__((unused)) int ac, char **av)
  */
 void prompt(void)
 {
-	write(STDOUT_FILENO, "$ ", 8);
+	write(STDOUT_FILENO, "$ ", 2);
 	fflush(stdout);
 }
 
@@ -43,7 +43,7 @@ void prompt(void)
  */
 void signal_handler(__attribute__((unused)) int signal)
 {
-	write(STDOUT_FILENO, "\n", 1);
+	write(STDOUT_FILENO, " ", 1);
 	prompt();
 }
 
