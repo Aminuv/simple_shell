@@ -79,7 +79,7 @@ char *get_command_path(char *c)
  */
 int exec_commands(char **args, char *p, int h)
 {
-	char *p_;
+	char *path;
 
 	if (get_command_f(args[0]))
 	{
@@ -89,8 +89,8 @@ int exec_commands(char **args, char *p, int h)
 
 	if (*args[0] != '/')
 	{
-		p_ = get_command_path(args[0]);
-		if (!p_)
+		path = get_command_path(args[0]);
+		if (!path)
 		{
 			command_error(args[0], p, h);
 			return (exit_v = 127);
@@ -98,24 +98,24 @@ int exec_commands(char **args, char *p, int h)
 	}
 	else
 	{
-		p_ = args[0];
-		if (access(p_, X_OK) != 0)
+		path = args[0];
+		if (access(path, X_OK) != 0)
 		{
 			command_error(args[0], p, h);
 			return (exit_v = 127);
 		}
 	}
 
-	if (echo_command(p_, args) == 0)
+	if (echo_command(path, args) == 0)
 	{
 		if (*args[0] != '/')
-			free(p_);
+			free(path);
 		return (0);
 	}
-	exec_command(p_, args);
+	exec_command(path, args);
 
 	if (*args[0] != '/')
-		free(p_);
+		free(path);
 
 	return (0);
 }
