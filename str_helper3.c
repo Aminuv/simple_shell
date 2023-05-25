@@ -85,7 +85,7 @@ char *_strpbrk(char *s, char *accp)
  *
  * Return: pointer.
  */
-char *_strstr(char *hay_stack, char *n_dle)
+char *_strstr(char *hay_stack, char *needle)
 {
 	int i;
 
@@ -96,13 +96,13 @@ char *_strstr(char *hay_stack, char *n_dle)
 	{
 		i = 0;
 
-		if (n_dle[i] == hay_stack[i])
+		if (needle[i] == hay_stack[i])
 		{
 			do {
-				if (n_dle[i + 1] == '\0')
+				if (needle[i + 1] == '\0')
 					return (hay_stack);
 				i++;
-			} while (n_dle[i] == hay_stack[i]);
+			} while (needle[i] == hay_stack[i]);
 		}
 		hay_stack++;
 	}

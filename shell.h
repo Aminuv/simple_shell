@@ -84,7 +84,7 @@ void file_input(char **avr, char *, int *);
 /*str handler*/
 int _strlen(char *s);
 char *_strcopy(char *dst, char *ss);
-int _strcompare(char *s1, char *s2);
+int _strcmp(char *s1, char *s2);
 int _strtowcompare(char *s1, char *s2, int num);
 char *_strconcatenate(char *dst, char *ss);
 

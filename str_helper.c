@@ -10,6 +10,9 @@ int _strlen(char *s)
 {
 	int count = 0;
 
+	if (!s)
+		return (0);
+
 	while ((*(s++) != '\0'))
 		count++;
 
@@ -48,7 +51,7 @@ char *_strcopy(char *dst, char *ss)
  *
  * Return: +ve or -ve value otherwise
  */
-int _strcompare(char *s1, char *s2)
+int _strcmp(char *s1, char *s2)
 {
 	int i = 0;
 	int sum;
@@ -65,7 +68,7 @@ int _strcompare(char *s1, char *s2)
 }
 
 /**
- * _strtowcompare - compares two strings
+ * _strcmp - compares two strings
  * @s1: frst string
  * @s2: second string
  * @num: max number of bytes to check

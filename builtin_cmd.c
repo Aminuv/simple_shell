@@ -21,7 +21,7 @@ int (*get_command_f(char *c))(char **, char*, int)
 
 	while (builtins[i].op)
 	{
-		if (_strcompare(builtins[i].op, c) == 0)
+		if (_strcmp(builtins[i].op, c) == 0)
 			return (builtins[i].f);
 		i++;
 	}

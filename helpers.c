@@ -161,10 +161,10 @@ int exec_command(char *arg, char **args)
  */
 int echo_command(char *arg, char **args)
 {
-	if (_strcompare(arg, "/usr/bin/echo") == 0 && *(args[1]) == '$')
+	if (_strcmp(arg, "/usr/bin/echo") == 0 && *(args[1]) == '$')
 	{
 
-		if (_strcompare(args[1], "$$") == 0)
+		if (_strcmp(args[1], "$$") == 0)
 		{
 			char *_pid = _tostring(getpid());
 
@@ -172,7 +172,7 @@ int echo_command(char *arg, char **args)
 			write(STDOUT_FILENO, "\n", 1);
 			free(_pid);
 		}
-		else if (_strcompare(args[1], "$?") == 0)
+		else if (_strcmp(args[1], "$?") == 0)
 		{
 			char *_exit_v = _tostring(exit_v);
 
