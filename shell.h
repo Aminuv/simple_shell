@@ -18,7 +18,6 @@
 extern char **environ;
 static __attribute__((unused)) int exit_v;
 
-
 /**
  * struct op - Struct op
  *
