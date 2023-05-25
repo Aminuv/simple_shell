@@ -43,7 +43,7 @@ void prompt(void)
  */
 void signal_handler(__attribute__((unused)) int signal)
 {
-	write(STDOUT_FILENO, " ", 1);
+	write(STDOUT_FILENO, "\n", 1);
 	prompt();
 }
 
