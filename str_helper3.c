@@ -89,7 +89,7 @@ char *_strstr(char *hay_stack, char *needle)
 {
 	int i;
 
-	if (*n_dle == 0)
+	if (*needle == 0)
 		return (hay_stack);
 
 	while (*hay_stack)
