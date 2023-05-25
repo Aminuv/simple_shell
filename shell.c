@@ -31,7 +31,7 @@ int main(__attribute__((unused)) int ac, char **av)
  */
 void prompt(void)
 {
-	write(STDOUT_FILENO, "($) ", 8);
+	write(STDOUT_FILENO, "$ ", 8);
 	fflush(stdout);
 }
 
